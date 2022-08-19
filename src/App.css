@@ -1,0 +1,18 @@
+.principal {
+	display: flex;
+	align-content: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+h2 {
+	margin-bottom: 2em;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	color: white;
+
+}

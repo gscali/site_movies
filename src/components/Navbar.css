@@ -1,0 +1,37 @@
+.title{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 40px;
+	font-family: "Archivo";
+	font-style: normal;
+	color: white;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 2em;
+
+}
+
+.searchbar {
+	padding: 0 0 0 45px;
+	border-radius: 8px;
+	width: 436px;
+	height: 44px;
+	color: white;
+}
+
+.searchbar::placeholder {
+	color:  white;
+	font-family: "Archivo";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+
+}

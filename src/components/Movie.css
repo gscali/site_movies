@@ -1,0 +1,68 @@
+
+
+.second {
+	width: 140px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 2em;
+	transition: 0.5s;
+}
+
+.second:hover{
+	-ms-transform: scale(1.1); 
+	-webkit-transform: scale(1.5);
+	transform: scale(1.1);
+	}
+
+h3 {
+	color: azure;
+	font-family: "Inter";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: center;
+}
+
+p {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #9b9b9b;
+	font-family: "Archivo";
+	font-style: normal;
+}
+
+.affiche {
+	width: 140px;
+	height: 200px;
+}
+
+.percent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	
+
+}
+
+.progress {
+	width: 80px;
+	height: 8px;
+	border-radius: 30px;
+	overflow: hidden;
+	/* background: linear-gradient(to right, rgba(255, 255, 0, 0.79) 33%,
+	rgba(255, 166, 0, 0.939)66%, rgba(255, 0, 0, 0.908) 100%); */
+}
+
+.chiffre {
+
+	color: white;
+	font-family: "Inter";
+	font-weight: 400;
+	font-style: normal;
+	font-size: 12px;
+	line-height: 16px;
+}
