@@ -8,41 +8,58 @@ import { Movie } from '../components/Movie';
 
 export const Navbar = () => {
 
-	const [search, setsearch] = useState([])
+	// const [search, setSearch] = useState("")
 	const [resultSearch, setResultSearch] = useState([])
 
 	function handleChange(e) {
-		setsearch(e.target.value)
-		console.log(e.target.value);
-		
-	}
-
-	useEffect(()=> {
+		let search = e.target.value;
+		console.log('handleChange ->', search);
 		getSearchMovies(search).then((res) => {
 			setResultSearch(res.results)
 			console.log(res.results)
 		}).catch (error => {
 			setResultSearch([]);
 			console.log(error.name, error.message);
-		})
-		return () => {}
-	}, [search])
+		});
+	}
+
+	useEffect(()=> {
+		console.log('useEffect');
+		// return () => {}
+	}, [resultSearch])
+	
+	// if(resultSearch?.length > 0) {
+		return (
+				<div className="navbar">
+					<h1 className="title">videoclub</h1>
+					<input onChange={(e) => handleChange(e)} className="searchbar" placeholder="Rechercher un film, un réalisateur, un acteur ..."/>
+					{resultSearch?.length &&
+						<div className="recherche">
+								{resultSearch.map((movie, i) => <Movie id={movie.id} key={i}/>)}
+						</div>
+					}
+				</div>
+	  )
+	// }
+	// else {
+	
+	// return (
+	// 			  <div className="navbar">
+	// 				<h1 className="title">videoclub</h1>
+	// 				<input onChange={handleChange}className="searchbar" placeholder="Rechercher un film, un réalisateur, un acteur ..."/>
+	// 				<div className="recherche"></div>
+	// 			</div>
+	//   )
+	
+	// } 
+}
 
 
-  return (	
-	  		<div className="navbar">
+/* <div className="navbar">
 				<h1 className="title">videoclub</h1>
 				<input onChange={handleChange}className="searchbar" placeholder="Rechercher un film, un réalisateur, un acteur"/>
 				<div className="recherche">
-					{resultSearch &&
-						{resultSearch.map((movie, i) => 
-							{
-								return <Movie id={movie.id} key={i}/> )
-							}
-						}
-					}
+					{}
 						
 				</div>
-			</div>
-  )
-}
+			</div> */

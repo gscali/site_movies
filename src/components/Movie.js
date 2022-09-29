@@ -9,12 +9,10 @@ export const Movie = ({id, isTrending}) => {
 	const [movie, setmovie] = useState(null);
 
 	useEffect(() => {
-		if(!movie){
-			getMoviesDetails(id).then((film) => {
-				console.log(film);
-				setmovie(film)});
-	}}, [id]
-	)
+		getMoviesDetails(id).then((film) => {
+			console.log(film);
+			setmovie(film)});
+	}, [id]);
 
 	return ( movie ?
 		<div className='second'>

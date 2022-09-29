@@ -19,6 +19,8 @@
 }
 
 .searchbar {
+	display: flex;
+	flex-direction: column;
 	padding: 0 0 0 45px;
 	border-radius: 8px;
 	width: 436px;
@@ -33,5 +35,12 @@
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 20px;
+}
 
+.recherche {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: square;
+	flex-direction: row;
 }
